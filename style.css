@@ -1,0 +1,70 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: cursive;
+}
+
+section {
+  display: flex;
+  width: 100%;
+  background-color: #b5c18e;
+}
+section .right_post {
+  padding: 15px;
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-left: 1px solid rgba(99, 98, 98, 0.2745098039);
+}
+section .right_post .posts {
+  background-color: #f7dcb9;
+  padding: 15px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+section .right_post .posts h3 {
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(99, 98, 98, 0.2745098039);
+  color: #254336;
+}
+section .right_post .posts p {
+  margin-top: 5px;
+  color: #216b4b;
+}
+section .left_name_wraper {
+  width: 30%;
+}
+section .left_name_wraper .left_name {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+section .left_name_wraper .left_name .name_emile {
+  background-color: #deac80;
+  padding: 15px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+section .left_name_wraper .left_name .name_emile h3 {
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(99, 98, 98, 0.2745098039);
+  color: #254336;
+}
+section .left_name_wraper .left_name .name_emile p {
+  margin-top: 5px;
+  color: #216b4b;
+}
+
+.sellected {
+  border: 2px solid #028391;
+}/*# sourceMappingURL=style.css.map */
