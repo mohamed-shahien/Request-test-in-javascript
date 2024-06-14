@@ -1,10 +1,11 @@
-function getPost (userid) {
+
+function getPost(userid) {
   let request = new XMLHttpRequest();
-  request.open("GET", "https://jsonplaceholder.typicode.com/posts?userId="+ userid)
+  request.open("GET", "https://jsonplaceholder.typicode.com/posts?userId=" + userid)
   request.responseType = "json";
   request.send();
   request.onload = () => {
-    if(request.status >= 200 && request.status < 300) {
+    if (request.status >= 200 && request.status < 300) {
       let posts = request.response;
       document.querySelector('.right_post').innerHTML = null;
       for (post of posts) {
@@ -15,18 +16,18 @@ function getPost (userid) {
         document.querySelector('.right_post').innerHTML += content;
         console.log(typeof request.response);
       }
-    }else {
+    } else {
       alert("error in request")
     }
   }
 }
-function getUsera () {
+function getUsera() {
   let request = new XMLHttpRequest();
   request.open("GET", "https://jsonplaceholder.typicode.com/users")
   request.responseType = "json";
   request.send();
   request.onload = () => {
-    if(request.status >= 200 && request.status < 300) {
+    if (request.status >= 200 && request.status < 300) {
       let users = request.response;
       document.querySelector('.left_name').innerHTML = null;
       for (user of users) {
@@ -35,18 +36,18 @@ function getUsera () {
           <p class="email">${user.email}</p>
         </div>`;
         document.querySelector('.left_name').innerHTML += content;
-        console.log(typeof request.response);
       }
-    }else {
+    } else {
       alert("error in request")
     }
   }
 }
+getPost(1);
 getUsera();
 function userID(id, el) {
   getPost(id);
   let elements = document.querySelectorAll('.name_emile')
-  for ( element of elements){
+  for (element of elements) {
     element.classList.remove('sellected');
   }
   el.classList.add('sellected')
